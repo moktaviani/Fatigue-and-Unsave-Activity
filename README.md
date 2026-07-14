@@ -6,7 +6,7 @@ A real-time computer vision system that monitors a driver through a webcam, vide
 
 This project uses two separate YOLOv11n object detection models running in parallel:
 
-1. **Fatigue Detection Model** — detects eye and mouth states to identify drowsiness and yawning.
+1. [**Fatigue Detection Model**](https://github.com/moktaviani/Fatigue-Detection-Model-using-YOLOv11) — detects eye and mouth states to identify drowsiness and yawning.
 2. **Unsafe Activity Detection Model** — detects smoking, vaping, and phone usage while driving.
 
 When fatigue or unsafe behavior is detected consistently over a configurable time window, the system displays an on-screen warning and plays an audio alert.
@@ -28,12 +28,12 @@ When fatigue or unsafe behavior is detected consistently over a configurable tim
 
 ```
 .
-├── main.py            # Entry point: CLI, detection loop, alert logic, drawing
+├── main.py             # Entry point: CLI, detection loop, alert logic, drawing
 ├── config.py           # Model paths, thresholds, class names, colors, alert settings
 ├── event_tracker.py    # Tracks duration/frequency of fatigue events (eye/mouth)
 ├── utils.py            # FPS counter, resource monitor, drawing helpers
-├── models/              # Trained YOLOv11n model weights (.pt files)
-└── requirements.txt     # Python dependencies
+├── models/             # Trained YOLOv11n model weights (.pt files)
+└── requirements.txt    # Python dependencies
 ```
 
 ## Requirements
